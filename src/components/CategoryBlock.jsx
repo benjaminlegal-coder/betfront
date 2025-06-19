@@ -1,3 +1,5 @@
+'use client';
+
 export default function CategoryBlock({ title, sites }) {
   const handleClick = async (site) => {
     try {

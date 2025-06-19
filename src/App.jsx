@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import RestaurantLanding from "./pages/RestaurantLanding";
-import BetLanding from "./pages/BetLanding";
+import RestaurantLanding from "./app/RestaurantLanding";
+import BetLanding from "./app/BetLanding";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);

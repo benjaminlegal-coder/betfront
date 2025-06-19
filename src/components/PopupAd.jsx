@@ -1,4 +1,8 @@
+'use client';
+
 import { useEffect, useState } from "react";
+
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
 export default function PopupAd() {
   const [popupAds, setPopupAds] = useState([]);
@@ -7,7 +11,7 @@ export default function PopupAd() {
   useEffect(() => {
     const fetchPopups = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/popups`);
+        const res = await fetch(`${baseUrl}/api/popups`);
         const data = await res.json();
         setPopupAds(data);
         setIsVisible(true); // veriler geldikten sonra popup'ı göster
@@ -28,7 +32,7 @@ export default function PopupAd() {
     if (!popup.id) return;
 
     try {
-      await fetch(`${import.meta.env.VITE_API_URL}/api/popups/${popup.id}/click`, {
+      await fetch(`${baseUrl}/api/popups/${popup.id}/click`, {
         method: "POST",
       });
     } catch (err) {

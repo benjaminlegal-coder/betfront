@@ -1,3 +1,5 @@
+'use client';
+
 export default function HeaderBanner() {
   return (
     <div className="bg-[#0f1321] text-white shadow-md sticky top-0 z-50">

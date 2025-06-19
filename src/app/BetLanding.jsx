@@ -1,3 +1,6 @@
+'use client';
+
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import '../App.css';
 import FeaturedSites from '../components/FeaturedSites';
@@ -7,14 +10,13 @@ import PopupAd from '../components/PopupAd';
 import SideBanners from '../components/SideBanners';
 import CategoryBlock from '../components/CategoryBlock';
 import ContactButtons from '../components/ContactButtons';
-import { Helmet } from "react-helmet";
 
 // Cihaz türünü belirle (mobil mi masaüstü mü)
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const isMobile = /iPhone|iPad|iPod|Android/i.test(typeof navigator !== 'undefined' ? navigator.userAgent : "");
 
 // Analytics gönderme fonksiyonu
 const sendAnalytics = async ({ type, source, sourceId, device }) => {
-  await fetch(`${import.meta.env.VITE_API_URL}/api/analytics`, {
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/analytics`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ type, source, sourceId, device }),
@@ -35,7 +37,7 @@ function BetLanding() {
 
     const fetchData = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_API_URL;
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
         const [categoriesRes, sitesRes] = await Promise.all([
           fetch(`${baseUrl}/api/categories`),
@@ -75,27 +77,25 @@ function BetLanding() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-gray-200 bg-[#151827]">
-      <Helmet>
+    <>
+      <Head>
         <title>2025’in En İyi Deneme Bonusu Veren Bahis Siteleri</title>
         <meta name="description" content="Deneme bonusu sunan bahis siteleri listemizi inceleyin. Güvenilir, editör onaylı siteler." />
-      </Helmet>
-
-      <HeaderBanner />
-      <SideBanners />
-      <PopupAd />
-
-      <main className="px-4 py-8 lg:px-[160px] container mx-auto">
-        <FeaturedSites />
-
-        {categoryData.map((category, index) => (
-          <CategoryBlock key={index} title={category.title} sites={category.sites} />
-        ))}
-      </main>
-
-      <ContactButtons />
-      <Footer />
-    </div>
+      </Head>
+      <div className="relative min-h-screen text-gray-200 bg-[#151827]">
+        <HeaderBanner />
+        <SideBanners />
+        <PopupAd />
+        <main className="px-4 py-8 lg:px-[160px] container mx-auto">
+          <FeaturedSites />
+          {categoryData.map((category, index) => (
+            <CategoryBlock key={index} title={category.title} sites={category.sites} />
+          ))}
+        </main>
+        <ContactButtons />
+        <Footer />
+      </div>
+    </>
   );
 }
 

@@ -1,4 +1,8 @@
+'use client';
+
 import { useEffect, useState } from "react";
+
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
 export default function SideBanners() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +11,7 @@ export default function SideBanners() {
   useEffect(() => {
     const fetchAds = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/sideads`);
+        const res = await fetch(`${baseUrl}/api/sideads`);
         const data = await res.json();
         const rightSideAds = data.filter(ad => ad.position === "right" || !ad.position);
         setAds(rightSideAds);
@@ -24,7 +28,7 @@ export default function SideBanners() {
     if (!ad.id) return;
 
     try {
-      await fetch(`${import.meta.env.VITE_API_URL}/api/sideads/${ad.id}/click`, {
+      await fetch(`${baseUrl}/api/sideads/${ad.id}/click`, {
         method: "POST",
       });
     } catch (err) {

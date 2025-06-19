@@ -1,3 +1,5 @@
+'use client';
+
 export default function ContactButtons() {
   return (
     <div className="bg-[#151827] py-6 px-4">
