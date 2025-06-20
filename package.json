@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@netlify/next": "^1.4.9",
     "@netlify/plugin-nextjs": "^5.11.3",
     "@tailwindcss/postcss": "^4.1.10",
     "autoprefixer": "^10.4.21",
