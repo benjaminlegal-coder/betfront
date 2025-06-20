@@ -75,6 +75,22 @@ export default function RootLayout({ children }) {
             "https://t.me/benjaminlegal"
           ]
         }` }} />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-905SNCLCZ3"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-905SNCLCZ3');
+        ` }} />
+        {/* Font preconnect ve display=swap */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap" rel="stylesheet" />
+        {/* Erişilebilirlik için ek meta */}
+        <meta name="color-scheme" content="light dark" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="320" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
