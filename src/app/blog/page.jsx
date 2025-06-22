@@ -25,7 +25,7 @@ export default function BlogPage() {
       <Head>
         <title>Blog - Deneme Bonusu Bilgilendirme</title>
         <meta name="description" content="Deneme bonusu ve bahis dünyası hakkında güncel, bilgilendirici blog yazıları." />
-        <link rel="canonical" href="https://www.hotelcentromar.com/blog" />
+        <link rel="canonical" href="https://tastegarden.shop/blog" />
       </Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Blog</h1>

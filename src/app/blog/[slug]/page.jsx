@@ -63,7 +63,7 @@ export default function BlogPost({ params }) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Blog", "item": "https://www.hotelcentromar.com/blog"},
+            {"@type": "ListItem", "position": 1, "name": "Blog", "item": "https://tastegarden.shop/blog"},
             {"@type": "ListItem", "position": 2, "name": "${data.title}", "item": "${url}"}
           ]
         }` }} />

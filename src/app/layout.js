@@ -28,12 +28,12 @@ export default function RootLayout({ children }) {
         <title>Deneme Bonusu Veren Siteler 2025 - En Güncel Deneme Bonusu Listesi</title>
         <meta name="description" content="2025 yılında en iyi deneme bonusu veren siteler: Efesbet 333 TL, Gobahis 500 TL, Savabet 444 TL, Enbet 250 TL ve daha fazlası! Güncel ve güvenilir deneme bonusu fırsatlarını hemen inceleyin." />
         <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="canonical" href="https://www.hotelcentromar.com" />
+        <link rel="canonical" href="https://tastegarden.shop" />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Deneme Bonusu Veren Siteler 2025 - En Güncel Deneme Bonusu Listesi" />
         <meta property="og:description" content="2025'in en iyi ve güvenilir deneme bonusu veren siteleri burada! Hemen güncel bonusları karşılaştırın." />
-        <meta property="og:url" content="https://www.hotelcentromar.com" />
+        <meta property="og:url" content="https://tastegarden.shop" />
         <meta property="og:image" content="/restaurant-preview.webp" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Deneme Bonusu Veren Siteler 2025",
-          "url": "https://www.hotelcentromar.com",
+          "url": "https://tastegarden.shop",
           "logo": "/favicon.png",
           "sameAs": [
             "https://www.instagram.com/benjaminlegal",
