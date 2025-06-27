@@ -56,7 +56,7 @@ export default function RestaurantLanding() {
             <span>+90 555 123 45 67</span>
           </div>
           <div className="flex-1 flex justify-center">
-            <img src="/logo.webp" alt="Taste Garden Logo" className="w-20 h-20 object-contain" />
+            <img src="/logo.webp" alt="Taste Garden Logo" className="w-40 h-40 object-contain" />
           </div>
           <div className="flex-1 flex justify-end space-x-4 text-sm">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">Facebook</a>
