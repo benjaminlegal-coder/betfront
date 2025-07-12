@@ -91,6 +91,7 @@ export default function RootLayout({ children }) {
         <meta name="color-scheme" content="light dark" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="320" />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="oiQfpqKjV5J8nk5AmXx++w" async></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}

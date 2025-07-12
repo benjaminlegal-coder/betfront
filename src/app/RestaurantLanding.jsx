@@ -48,6 +48,7 @@ export default function RestaurantLanding() {
             })
           }}
         />
+        
       </Head>
       {/* Header Top Bar */}
       <header className="bg-white border-b border-gray-200">
