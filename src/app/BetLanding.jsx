@@ -60,7 +60,7 @@ function BetLanding() {
             sites: filteredSites.map((site) => ({
               name: site.name,
               url: site.url,
-              image: `${baseUrl}${site.image}`,
+              image: site.image, // baseUrl ekleme!
               bonus: site.bonus,
               id: site.id,
             })),
