@@ -1,9 +1,11 @@
 'use client';
 
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
+
 export default function CategoryBlock({ title, sites }) {
   const handleClick = async (site) => {
     try {
-      await fetch(`${import.meta.env.VITE_API_URL}/api/sites/${site.id}/click`, {
+      await fetch(`${baseUrl}/api/sites/${site.id}/click`, {
         method: "POST",
       });
     } catch (error) {
