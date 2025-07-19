@@ -83,7 +83,6 @@ function BetLanding() {
         <meta name="description" content="Deneme bonusu sunan bahis siteleri listemizi inceleyin. Güvenilir, editör onaylı siteler." />
       </Head>
       <div className="relative min-h-screen text-gray-200 bg-[#151827]">
-        <HeaderBanner />
         <SideBanners />
         <PopupAd />
         <main className="px-4 py-8 lg:px-[160px] container mx-auto">

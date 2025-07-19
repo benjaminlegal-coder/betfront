@@ -6,10 +6,15 @@ export default function HeaderBanner() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Sol: Site adı */}
         <div className="text-lg font-bold text-red-600 shrink-0">
-          <span className="glow-text">Deneme Bonusu Veren Siteler</span>
+          <span className="glow-text">BenjaminLegal</span>
         </div>
 
-       
+        {/* Orta: Kampanya mesajı - mobilde kayan yazı */}
+        <div className="flex-1 overflow-hidden relative h-5 sm:h-auto">
+          <div className="whitespace-nowrap animate-marquee text-sm sm:text-base font-semibold">
+            Reklam Vermek İçin İletişime Geçin: t.me/benjaminlegal
+          </div>
+        </div>
 
         {/* Sağ: Üye Ol butonu */}
         <a

@@ -6,17 +6,17 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Sol: Logo */}
         <span className="text-orange-400 font-semibold text-sm sm:text-base">
-          Reklam Alanı
+          Cratos Royal
         </span>
 
         {/* Orta: Bonus mesajı */}
         <p className="text-sm sm:text-base text-white text-center flex-1 px-4">
-          Reklam vermek için iletişime geçin: t.me/benjaminlegal
+          500 TL Deneme Bonusu veren Cratos Royal ile bahis keyfini yaşayın! 
         </p>
 
         {/* Sağ: Buton */}
         <a
-          href="https://t.me/benjaminlegal"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs px-4 py-2 rounded-md transition"
